@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import css from './SearchBar.module.css';
+import propTypes from 'prop-types';
 
 export default function SearchBar({ onChange }) {
   const [searchChange, setSearchChange] = useState('');
@@ -36,4 +37,8 @@ export default function SearchBar({ onChange }) {
       <Outlet />
     </>
   );
+}
+
+SearchBar.propTypes = {
+  onChange: propTypes.func
 }

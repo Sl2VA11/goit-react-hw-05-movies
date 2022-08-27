@@ -1,7 +1,8 @@
 import css from './ReviewsMarkup.module.css';
+import propTypes from 'prop-types';
 
 export default function ReviewsMarkup({ reviews }) {
-  console.log(reviews);
+ 
   return reviews !== null &&(
     <ul className={css.list}>
       {reviews.map(review => {
@@ -15,4 +16,8 @@ export default function ReviewsMarkup({ reviews }) {
       })}
     </ul>
   ); 
+}
+
+ReviewsMarkup.propTypes = {
+  reviews: propTypes.array.isRequired
 }

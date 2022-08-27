@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import css from './MovieDetailsMarkup.module.css';
-
+import propTypes from 'prop-types';
 export default function MovieDetailsMarkup({
   name,
   img,
@@ -12,7 +12,7 @@ export default function MovieDetailsMarkup({
   releaseDate,
 }) {
   const location = useLocation()
-  
+
   const backLinkHref = location.state?.from ?? '/';
   return (
     <>
@@ -48,3 +48,15 @@ export default function MovieDetailsMarkup({
     </>
   );
 }
+
+
+MovieDetailsMarkup.propTypes = {
+  name: propTypes.string,
+  img: propTypes.string,
+  title: propTypes.string,
+  overview: propTypes.string,
+  genres: propTypes.string,
+  average: propTypes.number,
+  count: propTypes.number,
+  releaseDate: propTypes.string,
+};

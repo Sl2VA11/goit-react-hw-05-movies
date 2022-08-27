@@ -1,4 +1,5 @@
 import css from '../Cast.module.css';
+import propTypes from 'prop-types';
 
 export default function CastMarkup({credits}) {
   return (
@@ -43,4 +44,8 @@ export default function CastMarkup({credits}) {
            );
         })
   );
+}
+
+CastMarkup.propTypes = {
+  credit: propTypes.object,
 }

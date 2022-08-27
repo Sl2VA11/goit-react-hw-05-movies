@@ -1,5 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-export default function MovieList({movies}) {
+import propTypes from 'prop-types';
+
+export default function MovieList({ movies }) {
+  
     const location = useLocation();
 
     const elements = movies.map(({ id, title }) => (
@@ -15,4 +18,8 @@ export default function MovieList({movies}) {
     ));
 
     return <ul>{elements}</ul>;
+}
+
+MovieList.propTypes = {
+   movies: propTypes.array.isRequired
 }

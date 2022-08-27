@@ -7,9 +7,7 @@ import css from './Cast.module.css';
 export default function Cast() {
   const [credits, setCredits] = useState([]);
   const { movieId } = useParams();
-  // const location = useLocation()
- 
-  // console.log(location.state.from);
+  
 
   useEffect(() => {
     getMovieCredits(movieId).then(res => {
