@@ -1,0 +1,29 @@
+.navbar {
+ 
+  border: solid 1px black;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+ box-shadow: 5px 5px 5px 4px rgb(232, 164, 38);
+}
+.navbarLinkWrapper{
+  display: flex;
+  justify-content: center;
+}
+.navbarLink {
+  cursor: pointer;
+  color: black;
+  font-size: 26px;
+}
+
+.navbarLink:not(:last-child) {
+  margin-right: 150px;
+}
+.navbarLink.active {
+  color: orange;
+}
+.navbarLink:hover:not(.active),
+.navbarLink:focus-visible:not(.active) {
+  color: rgb(110, 109, 109);
+}
+

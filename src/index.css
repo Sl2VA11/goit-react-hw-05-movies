@@ -1,0 +1,101 @@
+@import-normalize; /* bring in normalize.css styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.movie-title {
+  
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30;
+  color: rgb(44, 42, 42);
+}
+
+.btn{
+   width: 120px;
+   height: 35px;
+   background-color: orange;
+   border: none;
+   border-radius: 5px;
+   color: azure;
+   cursor: pointer;
+    margin-bottom: 30px;
+}
+.btn:hover{
+   background-color: rgb(186, 134, 37);
+}
+
+.btn:disabled{
+   color: rgb(136, 140, 144);
+   background-color: rgb(86, 58, 5);
+}
+
+
+.popular-movie{
+   padding: 10px;
+   border: 1px solid rgb(107, 72, 7);
+}
+
+.popular-movie:not(:last-child){
+   margin-bottom: 10px;
+}
+
+.popular-movie:hover,
+.popular-movie:focus{
+   border: 1px solid rgb(190, 135, 34);
+   box-shadow: 0px 4px 10px 1px rgb(232, 164, 38);
+
+}
+.popular-link{
+   font-weight: 400;
+   font-size: 20px;
+   color: rgb(195, 130, 8);
+}
+
+.title-wrapper{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.title{
+  font-size: 25px;
+  color: red;
+  text-align: center;
+}
+
+.navbarLink {
+  cursor: pointer;
+  color: black;
+  font-size: 26px;
+}
+
+.navbarLink:not(:last-child) {
+  margin-right: 150px;
+}
+.navbarLink.active {
+  color: orange;
+}
+.navbarLink:hover:not(.active),
+.navbarLink:focus-visible:not(.active) {
+  color: rgb(110, 109, 109);
+}

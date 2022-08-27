@@ -1,0 +1,23 @@
+.list{
+   padding-bottom: 50px;
+}
+.item:not(:last-child){
+   margin-bottom: 10px;
+    border-bottom: 2px solid orange;
+   padding-bottom: 15px;
+}
+
+.author{
+   font-weight: 700;
+   font-size: 20px;
+   color: orange;
+   margin-bottom: 10px;
+}
+
+.content {
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 1.35;
+   color:  rgb(71, 71, 71);
+
+}

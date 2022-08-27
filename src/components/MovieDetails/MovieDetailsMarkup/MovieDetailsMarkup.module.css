@@ -1,0 +1,96 @@
+.btnWrapper{
+   margin-bottom: 10px;
+}
+/* .btn{
+   width: 120px;
+   height: 35px;
+   background-color: orange;
+   border: none;
+   border-radius: 5px;
+   color: azure;
+   cursor: pointer;
+    margin-bottom: 30px;
+}
+.btn:hover{
+   background-color: rgb(186, 134, 37);
+} */
+.div{
+   display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(143, 141, 141);
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+}
+
+.imgWrapper{
+   
+   margin-right: 10px;
+}
+.img{
+   display: block;
+  width: 650px;
+}
+
+.title{
+   font-weight: 700;
+   font-size: 30px;
+   color: #000;
+   margin-bottom: 20px;
+}
+
+.score{
+   display: flex;
+   align-items: center;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 1.29;
+   max-width: 400px;
+   color: rgb(35, 35, 35);
+   margin-bottom: 15px;
+   
+}
+.average{
+   padding: 5px;
+   color: aliceblue;
+   background-color: orange;
+   border-radius: 40%;
+   margin-right: 5px;
+}
+.overview{
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 1.29;
+   max-width: 400px;
+   color: rgb(71, 71, 71);
+   margin-bottom: 15px;
+}
+.genresName{
+   
+   font-weight: 400;
+   font-size: 20px;
+   color: rgb(71, 71, 71);
+   align-items: center;
+}
+.genres{
+   font-weight: 700;
+   font-size: 25px;
+   color: orange;
+   margin-bottom: 10px;
+}
+
+.btnLinkWrapper{
+   display: flex;
+   
+   border-bottom: 1px solid rgb(143, 141, 141);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.btnCast{
+   margin-right: 20px;
+}
+
+/* .btn:disabled{
+   color: rgb(136, 140, 144);
+   background-color: rgb(86, 58, 5);
+} */
