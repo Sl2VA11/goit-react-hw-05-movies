@@ -14,7 +14,11 @@ export default function MoviesPage() {
 
   const onChange = inputValue => {
 
-    setSearchParams(inputValue !== '' ? { searchMovie: inputValue } : {});
+    setSearchParams(
+      inputValue !== ''
+        ? { searchMovie: inputValue }
+        : Notiflix.Notify.failure(`Enter movie name`)
+    );
   };
 
   useEffect(() => {
