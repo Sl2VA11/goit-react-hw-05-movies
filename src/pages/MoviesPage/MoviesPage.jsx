@@ -1,36 +1,44 @@
 import SearchBar from 'pages/MoviesPage/SearchBar/SearchBar';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,  } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Notiflix from 'notiflix';
 
 import { getSearchMovie } from '../../services/fetchMovie';
 import MovieList from 'components/MovieList/MovieList';
 
 export default function MoviesPage() {
-  const [value, setValue] = useState(null);
   const [movies, setMovies] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const idMovie = searchParams.get('searchMovie') ?? '';
+  console.log(idMovie);
+
   const onChange = inputValue => {
-    setValue(inputValue);
+
+    setSearchParams(inputValue !== '' ? { searchMovie: inputValue } : {});
   };
 
   useEffect(() => {
-    if (value === null) {
+    if (idMovie === '') {
       return;
     }
-    getSearchMovie(value).then(res => {
+
+    getSearchMovie(idMovie).then(res => {
       if (res.length === 0) {
-        Notiflix.Notify.failure("We couldn't find this movie :(");
+        Notiflix.Notify.failure(`We couldn't find ${idMovie}:(`);
       }
       setMovies(res);
-      
+
       return res;
     });
-  }, [value]);
+  }, [idMovie]);
 
+ 
+  
   return (
     <>
       <SearchBar onChange={onChange} />
 
-      {movies !== null && <MovieList movies={movies} />}
+      {movies && <MovieList movies={movies} />}
     </>
   );
 }
